@@ -229,7 +229,7 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Download wheels
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: Linux_wheels
           path: wheelhouse/
@@ -260,7 +260,7 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
     - name: Download wheels
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4.1.7
       with:
         name: MacOS_wheels
         path: wheelhouse/
@@ -291,7 +291,7 @@ jobs:
         python-version: ['3.8', '3.9', '3.10']
     steps:
     - name: Download wheels
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4.1.7
       with:
         name: MacOS_M1_wheels
         path: wheelhouse/
@@ -327,7 +327,7 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
     - name: Download wheels
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4.1.7
       with:
         name: Windows_wheels
         path: wheelhouse/
@@ -351,7 +351,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
     - name: Download all wheels
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4.1.7
       with:
         path: wheelhouse
     - name: Put them all in the dist folder
@@ -379,7 +379,7 @@ jobs:
       with:
         python-version: '3.9'
     - name: Download wheels
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4.1.7
       with:
         name: Linux_wheels
         path: wheelhouse/
@@ -409,7 +409,7 @@ jobs:
       with:
         ref: gh-pages
     - name: Download artefact
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4.1.7
       with:
         name: pytket_docs
         path: api/
